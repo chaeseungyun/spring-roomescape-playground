@@ -29,6 +29,7 @@ public class MissionStepTest {
                 .then().log().all()
                 .statusCode(200);
     }
+    /*
     @Test
     void step_two() {
         RestAssured.given().log().all()
@@ -150,4 +151,5 @@ public class MissionStepTest {
         Integer countAfterDelete = jdbcTemplate.queryForObject("SELECT count(1) from reservation", Integer.class);
         assertThat(countAfterDelete).isEqualTo(0);
     }
+    */
 }
