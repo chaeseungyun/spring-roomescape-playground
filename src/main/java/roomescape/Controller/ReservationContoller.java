@@ -34,7 +34,7 @@ public class ReservationContoller {
 
   @DeleteMapping("/{id}")
   public ResponseEntity<Void> deleteReservation(@PathVariable Long id) {
-    if (reservationService.deleteReservation(id)) return ResponseEntity.badRequest().build();
+    if (!reservationService.deleteReservation(id)) return ResponseEntity.badRequest().build();
     return ResponseEntity.noContent().build();
   }
 }
